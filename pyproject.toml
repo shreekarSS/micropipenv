@@ -1,20 +1,11 @@
 [build-system]
-requires = ["setuptools>=56.0.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = [ "whey",]
+build-backend = "whey"
 
-[tool.black]
-line-length = 120
-target-version = ['py36']
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | build
-  | dist
-)/
-'''
+[project]
+name = "sphinx-pyproject"
+version = "0.1.0"
+description = "Move some of your Sphinx configuration into pyproject.toml"
+readme = "README.rst"
+keywords = [ "documentation", "pep621", "sphinx", "toml",]
+dynamic = [ "requires-python", "classifiers", "dependencies",]
