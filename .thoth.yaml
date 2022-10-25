@@ -18,3 +18,9 @@ managers:
       labels:
         - bot
         - update
+  - name: version
+    configuration:
+      assignees:
+        - sesheta
+      labels: [bot]
+      changelog_file: true
